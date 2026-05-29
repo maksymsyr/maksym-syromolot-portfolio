@@ -4,6 +4,7 @@ import Terminal from "@/components/Terminal";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
 import ScrollReveal from "@/components/ScrollReveal";
+import ResumeDownload from "@/components/ResumeDownload";
 import { STACK, EXPERIENCE, PROJECTS } from "@/lib/data";
 
 export default function Home() {
@@ -65,6 +66,20 @@ export default function Home() {
               <span>Self · Dark → Bright</span>
             </div>
           </aside>
+
+          {/* RESUME DOWNLOAD */}
+          <div className="reveal" style={{
+            gridColumn: "1 / -1",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "2rem",
+            padding: "1rem 0 0.5rem",
+          }}>
+            <span style={{ flex: 1, height: "1px", background: "linear-gradient(to right, transparent, var(--ember))", opacity: 0.25 }} aria-hidden="true" />
+            <ResumeDownload />
+            <span style={{ flex: 1, height: "1px", background: "linear-gradient(to left, transparent, var(--ember))", opacity: 0.25 }} aria-hidden="true" />
+          </div>
 
           <aside className="terminal-feature reveal" aria-label="Interactive terminal demo">
             <Terminal />
